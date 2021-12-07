@@ -18,6 +18,9 @@ void swapAlternates(int*evenArr,int n)
     {
       if (i+1<n){
           swap (evenArr[i],evenArr[i+1]);
+         //int temp=evenArr[i];
+        //evenArr[i]=evenArr[i+1];
+        //evenArr[i+1]=temp;
       }
     }
 }
