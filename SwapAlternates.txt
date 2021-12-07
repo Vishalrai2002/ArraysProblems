@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+// Swap Alternates Problem
+// INPUT 1 2 3 4 5 6
+//OUTPUT 2 1 4 3 6 5
+
+void printArray(int *evenArr ,int n)
+{
+    for (int i=0;i<n;i++)
+    {
+        cout<<evenArr[i]<<" ";
+    }
+}
+
+void swapAlternates(int*evenArr,int n)
+{
+    for (int i=0;i<n;i+=2){
+      if (i+1<n){
+          swap (evenArr[i],evenArr[i+1]);
+      }
+    }
+}
+int main()
+{
+    int evenArr[8]={5,2,9,4,7,6,1,0};
+    int oddArr[5]={11,33,9,76,43};
+    swapAlternates(evenArr,8);
+    printArray(evenArr,8);
+    cout<<endl;
+    swapAlternates(oddArr,5);
+    printArray(oddArr,5);
+    
+}
+// INPUTS
+// 5 2 9 4 7 6 1 0
+// 11 33 9 76 43
+// OUTPUT
+// 2 5 4 9 6 7 0 1
+// 33 11 76 9 43
